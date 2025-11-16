@@ -1,0 +1,16 @@
+{% load static menu_tags %}
+
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'menus/menu.css' %}">
+</head>
+<body>
+
+<h1>TEST PAGE</h1>
+
+{% draw_menu 'main_menu' %}
+
+<p>Базовый html шаблон</p>
+
+</body>
+</html>

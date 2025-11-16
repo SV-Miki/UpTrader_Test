@@ -1,0 +1,43 @@
+.menu {
+    font-family: Arial, sans-serif;
+}
+
+.menu-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.menu-root, .submenu {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.menu-item {
+    margin: 2px 0;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #333;
+    padding: 2px 5px;
+    display: inline-block;
+}
+
+.menu-item.active > a {
+    font-weight: bold;
+    color: #d00;
+}
+
+.menu-item.expanded > .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    margin-left: 20px;
+}
+
+.menu-item:hover > a {
+    background-color: #eee;
+}

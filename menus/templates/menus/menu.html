@@ -1,0 +1,9 @@
+<div class="menu" data-name="{{ menu_name }}">
+  {% if menu_title %}<div class="menu-title">{{ menu_title }}</div>{% endif %}
+  <ul class="menu-root">
+    {% for node in roots %}
+      {% include "menus/menu_item.html" with node=node %}
+    {% empty %}
+    {% endfor %}
+  </ul>
+</div>
