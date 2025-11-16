@@ -1,6 +1,5 @@
 from django import template
 from django.template.loader import render_to_string
-from django.urls import NoReverseMatch, reverse
 from django.utils.safestring import mark_safe
 
 from menus.models import Menu, MenuItem
@@ -48,7 +47,7 @@ def draw_menu(context, menu_name):
     # Получаем все элементы меню одним запросом
     items = list(
         MenuItem.objects.filter(menu=menu)
-        .select_related("parent")
+        .only("id", "title", "parent_id", "url", "named_url", "order")
         .order_by("order", "id")
     )
 
